@@ -7,11 +7,10 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "CORE_ROLE")
-public class Role {
+public class Role extends BaseEntity<Integer> {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @Column(name = "CODE")
+    private String code;
 
     @Column(name = "TITLE")
     private String title;

@@ -8,11 +8,7 @@ import java.util.Collection;
 @Data
 @Entity
 @Table(name = "CORE_USER")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+public class User extends BaseEntity<Integer> {
 
     @Column(name = "USERNAME")
     private String userName;
@@ -33,7 +29,6 @@ public class User {
     }
 
     public User(User user) {
-        this.id=user.getId();
         this.active=user.getActive();
         this.email=user.getEmail();
         this.userName=user.getUserName();

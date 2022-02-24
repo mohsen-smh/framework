@@ -1,4 +1,4 @@
-package com.smh.framework.resource;
+package com.smh.framework.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RequestMapping("/rest/core")
 @RestController
-public class HomeResource {
+public class AppController {
 
     @GetMapping("/all")
     public String home(){
